@@ -25,9 +25,9 @@ def mapTimePeriod(freq:str, period:str) -> str:
         case '8' | '9': 
             #daily
             return f'{parsedDate.year}-D{parsedDate.dayOfYear:03d}'
-        case '19' | '20' | '21' | '67':  
+        case '17' | '19' | '20' | '21' | '67':  
             #weekly
-            return f'{parsedDate.year}W{parsedDate.dayOfYear:02d}'   
+            return f'{parsedDate.weekYear}W{parsedDate.week:02d}'   
         case '129': 
             #monthly
             return f'{parsedDate.year}-{parsedDate.month:02d}'
